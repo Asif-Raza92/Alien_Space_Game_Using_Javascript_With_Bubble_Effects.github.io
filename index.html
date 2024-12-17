@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Game</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0c192c;
+        overflow: hidden;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bubbles {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    .bubbles span {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: #4fc3dc;
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+        animation: animate 15s linear infinite;
+        animation-duration: calc(125s / var(--i));
+    }
+    .bubbles span:nth-child(even) {
+        background: #ff2d75;
+        box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    }
+    @keyframes animate {
+        0% {
+            transform: translateY(100vh) scale(0);
+        }
+    }
+    #gameTitle {
+        color: cyan;
+        font-size: 36px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        z-index: 10;
+    }
+    canvas {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(#6eedf6, #e49797);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:28;"></span>
+        </div>
+        <div id="gameTitle">Space Shooter Game</div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
