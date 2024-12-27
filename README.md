@@ -1,6 +1,6 @@
 # Alien_Space_Game_Using_Javascript.github.io
 THIS IS A SPACE GAME SUPPORT ME THANKS
- 
+ Disclaimer : This project is made with the help of Tutorial and I add some features and changed its User interface also take help of Ai to solve only error in projects.
 In this game, animated bubbles float from the bottom of the screen to the top, creating a dynamic background effect. The bubbles are randomly sized and animated at different speeds for a more varied and natural look. The game board is set in the center of the page, and the bubbles vanish once they have moved off-screen at the top.
 
 Customizing the Game
